@@ -4,3 +4,6 @@ window.addEventListener('resize', (event) => {
     main_nav.style.backgroundColor = '#1222';
 
 })
+
+const main_html = document.querySelector('html');
+main_html.style.backgroundColor = 'red';
