@@ -26,9 +26,9 @@ all_images[1].addEventListener('mouseover', (event) => {
 })
 
 // click
-
 const all_buttons = document.querySelectorAll('.btn')
 all_buttons[0].addEventListener('click', (event) => {
-    all_buttons[0].style.backgroundColor =  '#511';
-})
+    all_buttons[0].style.backgroundColor =  'dodgerblue';
+    all_buttons[0].style.color = 'white';
+}) 
 
