@@ -1,9 +1,12 @@
 // Your code goes here
+const main_html = document.querySelectorAll('html', 'head')
+// main_html.style.width = '100%';
 
-// const main_html = document.querySelector('body');
+const main_body = document.querySelector('body')
 // main_html.addEventListener('scroll', (event) => {
 //     main_html.style.backgroundColor = 'red';
-    
+    main_body.style.overflow = 'scroll';
+
 // }) 
 
 // resize
@@ -14,20 +17,38 @@ window.addEventListener('resize', (event) => {
 })
 
 // dblclick
-const all_images = document.querySelectorAll('img');
+const all_images = document.querySelectorAll('img')
 all_images[0].addEventListener('dblclick', (event) => {
     all_images[0].setAttribute('src', 'img/13178635_1082197168511196_4041460445760705289_n.jpg')
+    all_images[1].setAttribute('src', 'img/explora_map.jpg')
+    all_images[2].setAttribute('src', 'img/disney_adventure.jpg')
+    all_images[3].setAttribute('src', 'img/black_perl.jpg')
     all_images[0].style.height = '30rem';
+    
+    for (let i=0; i<all_buttons.length; i++) {
+        all_buttons[i].style.backgroundColor = 'limegreen';
+    }
+
 })
 
 // mouseover
 all_images[1].addEventListener('mouseover', (event) => {
-    all_images[1].style.borderRadius = '400px';
+    all_images[1].style.borderRadius = '40rem';
+    all_images[2].style.borderRadius = '40rem';
+    all_images[3].style.borderRadius = '40rem';
+    // all_images[2].style.borderRadius = '40rem';
+
+
 })
+
+
 
 // mouseout
 all_images[1].addEventListener('mouseout', (event) => {
+    all_images[0].style.borderRadius = '';
     all_images[1].style.borderRadius = '';
+    all_images[2].style.borderRadius = '';
+    all_images[3].style.borderRadius = '';
 })
 
 // click
@@ -36,4 +57,7 @@ all_buttons[0].addEventListener('click', (event) => {
     all_buttons[0].style.backgroundColor =  'dodgerblue';
     all_buttons[0].style.color = 'white';
 }) 
+
+
+
 
