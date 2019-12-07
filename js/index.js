@@ -1,13 +1,20 @@
 // Your code goes here
-const main_html = document.querySelectorAll('html', 'head')
+const main_html = document.querySelectorAll('html')
 // main_html.style.width = '100%';
 
 const main_body = document.querySelector('body')
 // main_html.addEventListener('scroll', (event) => {
 //     main_html.style.backgroundColor = 'red';
     main_body.style.overflow = 'scroll';
-
+    window.addEventListener('load', (event) => {
+       for (let i=0; i< all_buttons.length; i++) {
+           all_buttons[i].style.backgroundColor = 'red';
+       }
+        
+    })
 // }) 
+
+const header = document.querySelector('.main-navigation')
 
 // resize
 const main_nav = document.querySelector('.main-navigation')
@@ -24,7 +31,12 @@ all_images[0].addEventListener('dblclick', (event) => {
     all_images[2].setAttribute('src', 'img/disney_adventure.jpg')
     all_images[3].setAttribute('src', 'img/black_perl.jpg')
     all_images[0].style.height = '30rem';
-    
+    main_body.style.backgroundColor = 'black';
+    main_body.style.color = 'white';
+    main_body.style.fontFamily = 'cursive';
+    header.style.backgroundColor = 'black';
+    header.style.color = 'white';
+
     for (let i=0; i<all_buttons.length; i++) {
         all_buttons[i].style.backgroundColor = 'limegreen';
     }
@@ -32,7 +44,7 @@ all_images[0].addEventListener('dblclick', (event) => {
 })
 
 // mouseover
-all_images[1].addEventListener('mouseover', (event) => {
+all_images[0].addEventListener('mouseover', (event) => {
     all_images[1].style.borderRadius = '40rem';
     all_images[2].style.borderRadius = '40rem';
     all_images[3].style.borderRadius = '40rem';
@@ -44,7 +56,7 @@ all_images[1].addEventListener('mouseover', (event) => {
 
 
 // mouseout
-all_images[1].addEventListener('mouseout', (event) => {
+all_images[0].addEventListener('mouseout', (event) => {
     all_images[0].style.borderRadius = '';
     all_images[1].style.borderRadius = '';
     all_images[2].style.borderRadius = '';
