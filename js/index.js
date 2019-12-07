@@ -1,11 +1,25 @@
 // Your code goes here
 
+// mouseenter
 const nav = document.querySelectorAll('nav', '.nav-link')
 nav[0].addEventListener('mouseenter', (event) => {
     // for (let i=0; i<nav[0].length; i++) {
     //     nav[]
     // }
+    nav[0].style.border = '1px dotted red';
+    event.preventDefault();
+
     console.log(nav[0])
+})
+
+// mouseleave
+nav[0].addEventListener('mouseleave', (event) => {
+    nav[0].style.border = '';
+    
+    main_nav.style.backgroundColor = '';
+    main_nav.style.color = 'black';
+    // event.preventDefault();
+
 })
 
 
@@ -23,10 +37,8 @@ const main_html = document.querySelectorAll('html')
 // main_html.style.width = '100%';
 
 const main_body = document.querySelector('body')
-// main_html.addEventListener('scroll', (event) => {
-//     main_html.style.backgroundColor = 'red';
 main_body.style.overflow = 'scroll';
-// }) 
+
 
 const header = document.querySelector('.main-navigation')
 
@@ -51,8 +63,12 @@ all_images[0].addEventListener('dblclick', (event) => {
     header.style.backgroundColor = 'black';
     header.style.color = 'white';
     
+    
+    
+    
     for (let i=0; i<all_buttons.length; i++) {
         all_buttons[i].style.backgroundColor = 'limegreen';
+        
     }
     
 })
