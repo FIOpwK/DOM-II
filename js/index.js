@@ -25,6 +25,11 @@ all_images[1].addEventListener('mouseover', (event) => {
     all_images[1].style.borderRadius = '400px';
 })
 
+// mouseout
+all_images[1].addEventListener('mouseout', (event) => {
+    all_images[1].style.borderRadius = '';
+})
+
 // click
 const all_buttons = document.querySelectorAll('.btn')
 all_buttons[0].addEventListener('click', (event) => {
