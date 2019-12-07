@@ -11,7 +11,7 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 * [x] Clone your OWN version of the repository (Not Lambda's by mistake!).
 * [x] Create a new branch: git checkout -b `<firstName-lastName>`.
 * [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [x] Push commits: git push origin `<firstName-lastName>`.
+* [x] Push commits: git push --set-upstream origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
