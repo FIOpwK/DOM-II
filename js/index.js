@@ -5,7 +5,7 @@ window.addEventListener('load', (load) => {
     for(let i=0; i<all_buttons.length; i++) {
         all_buttons[i].textContent = 'Fun Button';
     }
-    
+   
     console.log('load [1]')
 })
 // [3]
@@ -14,6 +14,7 @@ window.addEventListener('resize', (resize) => {
         all_buttons[i].style.backgroundColor = 'red';
     }
     console.log('resize [3]')
+
 })
 
 // Grab Elements
@@ -24,12 +25,30 @@ const content_pick = document.querySelectorAll('.content-pick', '.destination')
 
 
 // Document Events
+document.addEventListener('click', (event) => {
+    // alert('clicked')
+    for(let i=0; i<all_buttons.length; i++) {
+        all_buttons[i].textContent = 'Sign Up';
+    }
+    
+    console.log('document click')
+})
 
 // :::: NAV :::: 
 // [4]
 nav[0].addEventListener('mouseover', (mouseover) => {
     console.log('mouseover [4]')
 })  
+
+nav[0].addEventListener('mouseout', (mouseout) => {
+    console.log('mouseout [11]')
+})
+
+nav[0].addEventListener('click', (event) => {
+    event.preventDefault();
+    console.log('nav click preventDefault()')
+    
+})
 
 // :::: IMAGES ::::
 // [5]
@@ -61,5 +80,13 @@ all_images[0].addEventListener('dragleave', (dragleave) => {
 //  :::: BUTTONS ::::
 // [10]
 all_buttons[0].addEventListener('click', (click) => {
+    all_buttons[1].addEventListener('click', (event) => {
+        content_pick[0].style.backgroundColor = 'red';
+        console.log('click [10.5')
+    })
+
+    content_pick[0].addEventListener('mouseleave', (event) => {
+        content_pick[0].style.backgroundColor = '';
+    })
     console.log('click [10]')
 })
