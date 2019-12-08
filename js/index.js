@@ -45,7 +45,7 @@ nav[0].addEventListener('mouseout', (mouseout) => {
 })
 
 nav[0].addEventListener('click', (event) => {
-    event.preventDefault();
+    event.preventDefault(); 
     console.log('nav click preventDefault()')
     
 })
@@ -62,6 +62,9 @@ all_images[0].addEventListener('mouseleave', (mouseleave) => {
 // [7]
 all_images[0].addEventListener('dblclick', (dblclick) => {
     all_images[0].setAttribute('src', 'img/13178635_1082197168511196_4041460445760705289_n.jpg')
+    all_images[1].setAttribute('src', 'img/explora_map.jpg')
+    all_images[2].setAttribute('src', 'img/disney_adventure.jpg')
+    all_images[3].setAttribute('src', 'img/black_perl.jpg')
     console.log('dblclick [7]')
 
 })
@@ -82,11 +85,24 @@ all_images[0].addEventListener('dragleave', (dragleave) => {
 all_buttons[0].addEventListener('click', (click) => {
     all_buttons[1].addEventListener('click', (event) => {
         content_pick[0].style.backgroundColor = 'red';
+        event.stopPropagation();
         console.log('click [10.5')
     })
 
+    // :::: CONTENT :::: 
+
     content_pick[0].addEventListener('mouseleave', (event) => {
         content_pick[0].style.backgroundColor = '';
+        
     })
     console.log('click [10]')
+})
+
+content_pick[0].addEventListener('mouseenter', (event) => {
+    content_pick[0].children[0].style.backgroundColor = 'blue';
+    content_pick[0].children[1].addEventListener('click', (event) => {
+        content_pick[0].children[0].style.backgroundColor = '';
+
+    });
+    console.log(event)
 })
